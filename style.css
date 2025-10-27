@@ -50,9 +50,9 @@ body {
 
 .sidebar .nav-link.active, 
 .sidebar .nav-link:hover {
-    background-color: rgba(230, 198, 110, 0.5);
+    background-color: rgba(247, 183, 0, 0.7);
     border-radius: 0.25rem;
-    color:  rgba(247, 183, 0, 1);
+    color: white;
     width: 90%;
     text-decoration: none;
 }
