@@ -10,7 +10,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
                 url('img/bg-sidebar.png') no-repeat center center;
     background-size: cover;
     color: white;
@@ -19,15 +19,29 @@ body {
 }
 
 .sidebar-header {
-    padding: 1.5rem;
+    padding: 0 1.5rem;
     background-color: rgba(247, 183, 0, 1);
     font-weight: bold;
-    font-size: 1.25rem;
+    font-size: 1rem;
+    margin-left: auto;
 }
 
+.bi-search {
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 1rem;
+    pointer-events: none;
+}
+
+.search-box input{
+    padding-left: 30px;
+}
 .sidebar .nav-link {
     color: white;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -36,15 +50,22 @@ body {
 
 .sidebar .nav-link.active, 
 .sidebar .nav-link:hover {
-    background-color: rgba(247, 183, 0, 0.7);
+    background-color: rgba(230, 198, 110, 0.5);
     border-radius: 0.25rem;
-    color: white;
+    color:  rgba(247, 183, 0, 1);
     width: 90%;
     text-decoration: none;
 }
 
 .sidebar .nav-link i {
     width: 20px;
+}
+
+.logo {
+    display: inline;
+    margin: 1rem auto;
+    width: 60px;
+    height: auto;
 }
 
 .sidebar .search-box {
