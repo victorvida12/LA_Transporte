@@ -1,165 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>LA Transportes</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar LA Transportes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="sidebar">
-    <div class="sidebar-top">
-      <img src="logo.png" alt="Logo">
-      <span>LA Transportes</span>
-    </div>
-    <div class="sidebar-search">
-      <input type="text" placeholder="Procurar opções do menu">
-    </div>
-    <ul class="sidebar-menu">
-      <li><a href="#"><i class="bi bi-house-door-fill"></i>Painel</a></li>
-      <li><a href="#"><i class="bi bi-calendar-event-fill"></i>Agenda</a></li>
-      <li><a href="#"><i class="bi bi-box-seam"></i>Entregas</a></li>
-      <li><a href="#"><i class="bi bi-truck-front-fill"></i>Veículos</a></li>
-      <li><a href="#"><i class="bi bi-cash-stack"></i>Financeiro</a></li>
-      <li><a href="#"><i class="bi bi-tools"></i>Locação de Maquinário</a></li>
-      <li><a href="#"><i class="bi bi-file-earmark-bar-graph-fill"></i>Relatório</a></li>
-      <li><a href="#" class="active"><i class="bi bi-person-fill"></i>Funcionários</a></li>
-    </ul>
-    <div class="sidebar-footer">
-      <a href="#">Sair</a>
-    </div>
-  </div>
-  <div class="content">
-    <div class="panel">
-      <div class="panel-header">Funcionários</div>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Modelo</th>
-            <th>CPF</th>
-            <th>Categoria</th>
-            <th>Status</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody id="tbody-funcionarios">
-          <tr>
-            <td>01</td>
-            <td>João José Silva</td>
-            <td>123.123.123-22</td>
-            <td>Maquinário</td>
-            <td>
-              <select>
-                <option>Nenhum</option>
-                <option>Disponível</option>
-                <option>Em Serviço</option>
-              </select>
-            </td>
-            <td>
-              <button class="table-btn" onclick="removerLinha(this)" title="Remover">&#10005;</button>
-            </td>
-          </tr>
-          <tr>
-            <td>02</td>
-            <td>João José Silva</td>
-            <td>123.123.123-11</td>
-            <td>Caminhão</td>
-            <td>
-              <select>
-                <option>Nenhum</option>
-                <option selected>Disponível</option>
-                <option>Em Serviço</option>
-              </select>
-            </td>
-            <td>
-              <button class="table-btn" onclick="removerLinha(this)" title="Remover">&#10005;</button>
-            </td>
-          </tr>
-          <tr>
-            <td>03</td>
-            <td>João José Silva</td>
-            <td>123.123.123-33</td>
-            <td>Caminhão</td>
-            <td>
-              <select>
-                <option>Nenhum</option>
-                <option>Disponível</option>
-                <option selected>Em Serviço</option>
-              </select>
-            </td>
-            <td>
-              <button class="table-btn" onclick="removerLinha(this)" title="Remover">&#10005;</button>
-            </td>
-        </tbody>
-      </table>
-      <div style="text-align:center;">
-        <button class="botao-simples" onclick="salvarAlteracoes()">Salvar Alterações</button>
-      </div>
-      <hr>
-      <div class="subtitulo">Adicionar</div>
-      <form id="form-adicionar" autocomplete="off">
-        <div class="adicionar-row">
-          <input type="text" id="novo-id" placeholder="ID">
-          <input type="text" id="novo-nome" placeholder="Nome">
-          <input type="text" id="novo-cpf" placeholder="CPF">
-          <select id="nova-categoria">
-            <option value="">Categoria</option>
-            <option>Maquinário</option>
-            <option>Caminhão</option>
-          </select>
+
+    <div class="sidebar d-flex flex-column">
+        <div class="col">  
+            <div class="sidebar-header col"><img src="img/logo-branca.png" alt="" class="logo col"><span class="col">LA Transportes</span></div>
         </div>
-        <div class="adicionar-container">
-          <button type="submit" class="botao-simples">Adicionar</button>
+        <div class="search-box row">
+            <i class="bi bi-search col"></i>
+            <input type="text" placeholder="         Procurar" class="col search-box">
         </div>
-      </form>
-      <div class="filtrar">
-        Filtrar por:
-        <select>
-          <option>--</option>
-        </select>
-      </div>
+
+        <nav class="nav flex-column">
+            <a class="nav-link" href="painel.html"><i class="bi bi-house"></i> Painel</a>
+            <a class="nav-link" href="agenda.html"><i class="bi bi-folder"></i> Agenda</a>
+            <a class="nav-link" href="entregas.html"><i class="bi bi-truck"></i> Entregas</a>
+            <a class="nav-link" href="veiculos.html"><i class="bi bi-car-front"></i> Veículos</a>
+            <a class="nav-link" href="financeiro.html"><i class="bi bi-currency-dollar"></i> Financeiro</a>
+            <a class="nav-link" href="locacao.html"><i class="bi bi-tools"></i> Locação de Maquinário</a>
+            <a class="nav-link" href="relatorio.html"><i class="bi bi-bar-chart"></i> Relatório</a>
+            <a class="nav-link" href="funcionarios.html"><i class="bi bi-people"></i> Funcionários</a>
+        </nav>
+
+        <div class="bottom">
+            <a class="nav-link" href="#"><i class="bi bi-box-arrow-left"></i> Sair</a>
+        </div>
     </div>
-  </div>
-  <footer>
-    2025 LA Transportes - Todos os direitos reservados.
-  </footer>
-  <script>
-    function removerLinha(btn) {
-      btn.closest('tr').remove();
-    }
-    document.getElementById('form-adicionar').onsubmit = function(e) {
-      e.preventDefault();
-      const id = document.getElementById('novo-id').value.trim();
-      const nome = document.getElementById('novo-nome').value.trim();
-      const cpf = document.getElementById('novo-cpf').value.trim();
-      const categoria = document.getElementById('nova-categoria').value;
-      if(id && nome && cpf && categoria){
-        const tbody = document.getElementById('tbody-funcionarios');
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-          <td>${id}</td>
-          <td>${nome}</td>
-          <td>${cpf}</td>
-          <td>${categoria}</td>
-          <td>
-            <select>
-              <option>Nenhum</option>
-              <option>Disponível</option>
-              <option>Em Serviço</option>
-            </select>
-          </td>
-          <td>
-            <button class="table-btn" onclick="removerLinha(this)" title="Remover">&#10005;</button>
-          </td>
-        `;
-        tbody.appendChild(tr);
-        this.reset();
-      }
-    }
-    function salvarAlteracoes() {
-      alert('Alterações salvas!');
-    }
-  </script>
+
+    <div style="margin-left:250px; padding:2rem;">
+        <!-- Conteúdo principal -->
+        <h1>Bem-vindo ao Painel</h1>
+        <p>Área de funcionarios do sistema</p>
+    </div>
+
 </body>
 </html>
