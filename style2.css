@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #dadada;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  .content {
+    margin-left: 275px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .panel {
+    width: 780px;
+    background: #ffffff;
+    border-radius: 13px;
+    margin: 40px 0 15px 0;
+    box-shadow: 0 4px 20px #1112;
+    overflow: hidden;
+    padding-bottom: 23px;
+    min-width: 340px;
+  }
+  .panel-header {
+    background: #ffd000;
+    padding: 28px 0 15px 0;
+    text-align: center;
+    font-size: 2.08rem;
+    font-weight: bold;
+    letter-spacing: .3px;
+    color: #181818;
+    border-radius: 13px 13px 0 0;
+  }
+  table {
+    width: 96%;
+    margin: 26px auto 0 auto;
+    border-collapse: collapse;
+    font-size: 1rem;
+    background: none;
+  }
+  th, td {
+    padding: 8px 7px;
+    text-align: center;
+    border: none;
+  }
+  th {
+    color: #1d1d1d;
+    font-weight: 500;
+    font-size: 1rem;
+    padding-bottom: 2px;
+  }
+  tr:not(:last-child) {
+    border-bottom: 1.4px solid #c4c4c4;
+  }
+  input[type="text"], select {
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    padding: 4px 8px;
+    width: 105px;
+    font-size: 1rem;
+    background: #f7f7f7;
+    outline: none;
+    text-align: center;
+  }
+  select { min-width: 95px; }
+  .table-btn {
+    background: none;
+    color: #393939;
+    border: none;
+    font-size: 1.14rem;
+    cursor: pointer;
+    margin: 0 0 0 2px;
+    border-radius: 30%;
+    transition: background .15s;
+  }
+  .table-btn:hover { background: #f9c6004c; }
+  .botao-simples {
+    background: #ffd000;
+    color: #222;
+    border-radius: 10px;
+    padding: 5px 24px;
+    border: none;
+    font-size: 1.07rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 1px 2px #bababa33;
+    transition: background .12s;
+  }
+  .botao-simples:hover { background: #e6bd00; }
+  hr {
+    margin: 26px auto 15px;
+    width: 92%;
+    border: none;
+    border-top: 2px solid #ccc;
+  }
+  .subtitulo {
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 17px;
+  }
+  .adicionar-row {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 44px;
+    align-items: center;
+    margin-bottom: 13px;
+  }
+  .adicionar-row input, .adicionar-row select {
+    width: 108px;
+    padding: 7px 9px;
+  }
+
+  .adicionar-container {
+    width: 100%;
+    text-align: center;
+  }
+  .filtrar {
+    float: right;
+    margin-right: 22px;
+    font-size: 0.97rem;
+    margin-top: 2px;
+  }
+  .filtrar select {
+    min-width: 105px;
+    padding: 4px 7px;
+    border-radius: 4px;
+  }

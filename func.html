@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>LA Transportes</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body> 
+  <div class="content">
+    <div class="panel">
+      <div class="panel-header">Funcionários</div>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Modelo</th>
+            <th>CPF</th>
+            <th>Categoria</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="tbody-funcionarios">
+          <tr>
+            <td>01</td>
+            <td>João José Silva</td>
+            <td>123.123.123-22</td>
+            <td>Maquinário</td>
+            <td>
+              <select>
+                <option>Nenhum</option>
+                <option>Disponível</option>
+                <option>Em Serviço</option>
+              </select>
+            </td>
+            <td>
+              <button class="table-btn" onclick="removerLinha(this)" title="Remover">&#10005;</button>
+            </td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>João José Silva</td>
+            <td>123.123.123-11</td>
+            <td>Caminhão</td>
+            <td>
+              <select>
+                <option>Nenhum</option>
+                <option selected>Disponível</option>
+                <option>Em Serviço</option>
+              </select>
+            </td>
+            <td>
+              <button class="table-btn" onclick="removerLinha(this)" title="Remover">&#10005;</button>
+            </td>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td>João José Silva</td>
+            <td>123.123.123-33</td>
+            <td>Caminhão</td>
+            <td>
+              <select>
+                <option>Nenhum</option>
+                <option>Disponível</option>
+                <option selected>Em Serviço</option>
+              </select>
+            </td>
+            <td>
+              <button class="table-btn" onclick="removerLinha(this)" title="Remover">&#10005;</button>
+            </td>
+        </tbody>
+      </table>
+      <div style="text-align:center;">
+        <button class="botao-simples" onclick="salvarAlteracoes()">Salvar Alterações</button>
+      </div>
+      <hr>
+      <div class="subtitulo">Adicionar</div>
+      <form id="form-adicionar" autocomplete="off">
+        <div class="adicionar-row">
+          <input type="text" id="novo-id" placeholder="ID">
+          <input type="text" id="novo-nome" placeholder="Nome">
+          <input type="text" id="novo-cpf" placeholder="CPF">
+          <select id="nova-categoria">
+            <option value="">Categoria</option>
+            <option>Maquinário</option>
+            <option>Caminhão</option>
+          </select>
+        </div>
+        <div class="adicionar-container">
+          <button type="submit" class="botao-simples">Adicionar</button>
+        </div>
+      </form>
+      <div class="filtrar">
+        Filtrar por:
+        <select>
+          <option>--</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
