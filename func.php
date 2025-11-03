@@ -11,12 +11,11 @@ $result = $conn->query($sql);
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>LA Transportes - Motoristas</title>
+<title>LA Transportes - Funcionários</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="style2.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-
 </head>
 <body> 
 
@@ -37,7 +36,7 @@ $result = $conn->query($sql);
         <a class="nav-link" href="financeiro.html"><i class="bi bi-currency-dollar"></i> Financeiro</a>
         <a class="nav-link" href="locacao.html"><i class="bi bi-tools"></i> Locação de Maquinário</a>
         <a class="nav-link" href="relatorio.html"><i class="bi bi-bar-chart"></i> Relatório</a>
-        <a class="nav-link active" href="motoristas.php"><i class="bi bi-people"></i> Funcionários</a>
+        <a class="nav-link active" href="func.php"><i class="bi bi-people"></i> Funcionários</a>
     </nav>
 
     <div class="bottom">
@@ -47,49 +46,58 @@ $result = $conn->query($sql);
 
 <div class="content">
     <div class="panel">
-        <div class="panel-header">Motoristas</div>
+        <div class="panel-header">Funcionários</div>
 
-        <table>
-            <thead class="tabelanomes">
-                <tr style = "text-align: center;">
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>Telefone</th>
-                    <th>Categoria</th>
-                    <th>Validade CNH</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody id="tbody-motoristas">
-                <?php if($result->num_rows > 0): ?>
-                    <?php while($row = $result->fetch_assoc()): ?>
-                        <tr>
-                            <td><?= $row['id'] ?></td>
-                            <td><?= htmlspecialchars($row['nome']) ?></td>
-                            <td><?= htmlspecialchars($row['telefone']) ?></td>
-                            <td><?= htmlspecialchars($row['categoria_cnh']) ?></td>
-                            <td><?= htmlspecialchars($row['validade_cnh']) ?></td>
-                            <td>
-                                <a href="func.php?edit=<?= $row['id'] ?>" title="Editar">&#9998;</a>
-                                <a href="motoristas_action.php?delete=<?= $row['id'] ?>" onclick="return confirm('Deseja realmente excluir?')" title="Remover">&#10005;</a>
-                            </td>
-                        </tr>
-                    <?php endwhile; ?>
-                <?php else: ?>
-                    <tr><td colspan="7">Nenhum motorista cadastrado.</td></tr>
-                <?php endif; ?>
-            </tbody>
-        </table>
-
-        <div style="text-align:center; margin-top:10px;">
-            <button class="botao-simples" onclick="window.location.reload()">Atualizar</button>
-        </div>
+        <!-- Form para atualizar status -->
+        <form action="motoristas_status_action.php" method="POST">
+            <table>
+                <thead class="tabelanomes">
+                    <tr style="text-align: center;">
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th>Categoria</th>
+                        <th>Validade CNH</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-motoristas">
+                    <?php if($result->num_rows > 0): ?>
+                        <?php while($row = $result->fetch_assoc()): ?>
+                            <tr>
+                                <td><?= $row['id'] ?></td>
+                                <td><?= htmlspecialchars($row['nome']) ?></td>
+                                <td><?= htmlspecialchars($row['telefone']) ?></td>
+                                <td><?= htmlspecialchars($row['categoria_cnh']) ?></td>
+                                <td><?= htmlspecialchars($row['validade_cnh']) ?></td>
+                                <td>
+                                    <select name="status[<?= $row['id'] ?>]">
+                                        <option value="Disponível" <?= $row['status']=="Disponível"?"selected":"" ?>>Disponível</option>
+                                        <option value="Em Serviço" <?= $row['status']=="Em Serviço"?"selected":"" ?>>Em Serviço</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <a href="func.php?edit=<?= $row['id'] ?>" title="Editar">&#9998;</a>
+                                    <a href="motoristas_action.php?delete=<?= $row['id'] ?>" onclick="return confirm('Deseja realmente excluir?')" title="Remover">&#10005;</a>
+                                </td>
+                            </tr>
+                        <?php endwhile; ?>
+                    <?php else: ?>
+                        <tr><td colspan="7">Nenhum motorista cadastrado.</td></tr>
+                    <?php endif; ?>
+                </tbody>
+            </table>
+            <div style="text-align:center; margin-top:10px;">
+                <button type="submit" class="botao-simples">Atualizar Status</button>
+            </div>
+        </form>
 
         <hr>
         <div class="subtitulo"><?= isset($_GET['edit']) ? "Editar Motorista" : "Adicionar Motorista" ?></div>
 
         <?php
-        $edit_id = 0; $edit_nome = $edit_telefone = $edit_cnh = $edit_categoria = $edit_validade = "";
+        $edit_id = 0; $edit_nome = $edit_telefone = $edit_cnh = $edit_categoria = $edit_validade = $edit_status = "";
         if(isset($_GET['edit'])){
             $edit_id = intval($_GET['edit']);
             $sql_edit = "SELECT * FROM motoristas WHERE id=$edit_id";
@@ -101,6 +109,7 @@ $result = $conn->query($sql);
                 $edit_cnh = $edit['cnh'];
                 $edit_categoria = $edit['categoria_cnh'];
                 $edit_validade = $edit['validade_cnh'];
+                $edit_status = $edit['status'];
             }
         }
         ?>
