@@ -18,6 +18,10 @@ body {
     flex-direction: column;
 }
 
+.flex-column {
+    margin-top: 0 !important;
+}
+
 .sidebar-header {
     padding: 0 1.5rem;
     background-color: rgba(247, 183, 0, 1);
