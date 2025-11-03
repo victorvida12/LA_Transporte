@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-image: url('fundo-login.jpg.png'); /* fundo total já incluso */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Wrapper principal */
+.login-wrapper {
+    width: 900px;
+    height: 650px;
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+/* Lado esquerdo */
+.login-left {
+    flex: 1;
+    background: url('imagem-caminhao.jpg.png') center center/cover no-repeat;
+    color: white;
+    padding: 30px;
+    display: flex;
+    align-items: flex-end;
+    font-weight: bold;
+    font-size: 24px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.login-logo {
+    display: block;
+    margin: 70px auto 0;
+    max-width: 150px;
+}
+
+/* Lado direito */
+.login-right {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+}
+
+/* Formulário */
+.login-form {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.login-form h1 {
+    margin: 0 0 10px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.login-form p.sub-title {
+    margin-bottom: 30px;
+    font-size: 12px;
+    color: #222;
+}
+
+/* Inputs */
+.login-form input[type="text"],
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100% !important;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+/* Checkbox lembrar-me */
+.remember-container {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+.remember-container label {
+    font-size: 13px;
+    cursor: pointer;
+    color: #555;
+}
+
+.remember-container input[type="checkbox"] {
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+/* Botão */
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffca07;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #e6b006;
+}
+
+/* Links */
+.login-form .links {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.login-form .links a {
+    color: #ffca07;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.login-form .links a:hover {
+    text-decoration: underline;
+}
+
+/* Mensagens */
+.login-form .error-message {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.login-form .success-message {
+    color: green;
+    font-size: 12px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* ---------- login (form) ---------- */
+.login-right {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+    min-width: 360px; /* garante espaço mínimo */
+}
+
+/* Form container */
+.login-form {
+    max-width: 360px; /* deixa um pouco maior que antes */
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Título e subtítulo */
+.login-form h1 {
+    margin: 0 0 10px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.login-form p.sub-title {
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #222;
+}
+
+/* Inputs - aplica a todos os tipos, garante box-sizing e largura total */
+.login-form input[type="text"],
+.login-form input[type="email"],
+.login-form input[type="password"],
+.login-form input,
+.login-form textarea,
+.login-form select {
+    box-sizing: border-box;
+    width: 100% !important;           /* garante largura completa */
+    display: block;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #fffbe6;               /* tom claro (amarelo claro) se quiser */
+    color: #111;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+/* foco */
+.login-form input:focus {
+    outline: none;
+    border-color: #ffca07;
+    box-shadow: 0 0 0 3px rgba(255,202,7,0.12);
+}
+
+/* Botão */
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffca07;
+    border: none;
+    border-radius: 6px;
+    color: #111;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.login-form button:hover { background-color: #e6b006; }
+
+/* Lembrar-me / links */
+.remember-container {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 12px;
+}
+.remember-container label { font-size: 13px; color: #444; }
+.login-form .links { margin-top: 8px; }
+.login-form .links a { color: #ffca07; text-decoration: none; font-size: 13px; }
