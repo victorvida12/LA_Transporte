@@ -3,6 +3,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.layout {
+    display: flex;
+}
+
 /* Sidebar */
 .sidebar {
     width: 250px;
@@ -11,7 +15,7 @@ body {
     top: 0;
     left: 0;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-                url('img/bg-sidebar.png') no-repeat center center;
+                url('../img/bg-sidebar.png') no-repeat center center;
     background-size: cover;
     color: white;
     display: flex;
