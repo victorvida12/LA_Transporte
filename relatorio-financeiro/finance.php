@@ -45,7 +45,7 @@ if ($result->num_rows > 0) {
           <a class="nav-link" href="../painel.php"><i class="bi bi-house"></i> Painel</a>
           <a class="nav-link" href="../agenda.php"><i class="bi bi-folder"></i> Agenda</a>
           <a class="nav-link" href="../entregas.php"><i class="bi bi-truck"></i> Entregas</a>
-          <a class="nav-link" href="../veiculos.php"><i class="bi bi-car-front"></i> Veículos</a>
+          <a class="nav-link" href="../veiculos.index"><i class="bi bi-car-front"></i> Veículos</a>
           <a class="nav-link active" href="finance.php"><i class="bi bi-currency-dollar"></i> Financeiro</a>
           <a class="nav-link" href="../locacao.php"><i class="bi bi-tools"></i> Locação</a>
           <a class="nav-link" href="../relatorio/relatorio.php"><i class="bi bi-bar-chart"></i> Relatório</a>
@@ -57,7 +57,7 @@ if ($result->num_rows > 0) {
       </div>
   </div>
 
-  <!-- CONTEÚDO PRINCIPAL -->
+
   <div class="container">
 
     <header>

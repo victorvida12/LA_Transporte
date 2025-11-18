@@ -2,20 +2,14 @@
 session_start();
 include "config.php";
 
-// =========================
-// Dados Funcionários
-// =========================
+
+
 $funcionarios = $conn->query("SELECT id, nome, status FROM motoristas ORDER BY id ASC");
 
-// =========================
-// Dados Veículos (base)
-// =========================
-$veiculos = []; // placeholder
 
-// =========================
-// Dados Maquinário (base)
-// =========================
-$maquinario = []; // placeholder
+$veiculos = []; 
+
+$maquinario = [];
 ?>
 
 <!DOCTYPE html>

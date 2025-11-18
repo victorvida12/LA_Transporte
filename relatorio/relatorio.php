@@ -34,13 +34,13 @@ if ($result && $result->num_rows > 0) {
   </div>
 
   <nav class="nav flex-column">
-      <a class="nav-link active" href="../painel.php"><i class="bi bi-house"></i> Painel</a>
+      <a class="nav-link" href="../painel.php"><i class="bi bi-house"></i> Painel</a>
       <a class="nav-link" href="../agenda.php"><i class="bi bi-folder"></i> Agenda</a>
       <a class="nav-link" href="../relatorio-entrega/index.php"><i class="bi bi-truck"></i> Entregas</a>
-      <a class="nav-link" href="../veiculos.php"><i class="bi bi-car-front"></i> Veículos</a>
-      <a class="nav-link" href="../rolatorio-financeiro/finance.php"><i class="bi bi-currency-dollar"></i> Financeiro</a>
+      <a class="nav-link" href="../veiculos.html"><i class="bi bi-car-front"></i> Veículos</a>
+      <a class="nav-link" href="../relatorio-financeiro/finance.php"><i class="bi bi-currency-dollar"></i> Financeiro</a>
       <a class="nav-link" href="../locacao.php"><i class="bi bi-tools"></i> Locação</a>
-      <a class="nav-link" href="relatorio.php"><i class="bi bi-bar-chart"></i> Relatório</a>
+      <a class="nav-link active" href="relatorio.php"><i class="bi bi-bar-chart"></i> Relatório</a>
       <a class="nav-link" href="../func.php"><i class="bi bi-people"></i> Funcionários</a>
   </nav>
 
