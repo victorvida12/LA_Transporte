@@ -19,7 +19,8 @@ function renderTabelaFinance() {
         <tr>
           <td>
             <button onclick="salvarEdicaoFinance(${idx})" title="Salvar">💾</button>
-            <button onclick="cancelarEdicaoFinance()" title="Cancelar">❌</button>
+            <button onclick="removerFinance(${idx})" title="Excluir">❌</button>
+
           </td>
           <td>
             <select id="editCategoria" required>

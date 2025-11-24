@@ -72,6 +72,7 @@
     border-radius: 14px;
     padding-bottom: 25px;
     margin-top: 10px;
+    justify-items: center;
 }
 
 .panel-header {
@@ -121,6 +122,7 @@ tr:not(:last-child) {
     gap: 20px;
 }
 
+
 .card-item {
     flex: 1 1 300px;
 }
@@ -137,3 +139,28 @@ tr:not(:last-child) {
 .status-disponivel { color: #0ca50c; font-weight: bold; }
 .status-em-servico { color: #c9a000; font-weight: bold; }
 .status-indisponivel { color: #d11a1a; font-weight: bold; }
+
+.status-table {
+    width: 100% !important;
+    margin: 0 auto !important;
+    border-collapse: collapse;
+    justify-content: center;
+}
+
+.status-table th,
+.status-table td {
+    padding: 10px;
+    text-align: center;
+}
+
+.status-table tr:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+}
+
+/* Garante que tudo dentro do painel siga o mesmo alinhamento */
+.panel {
+    width: 780px !important;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}

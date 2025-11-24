@@ -2,18 +2,16 @@
 require "../config.php";
 $data = json_decode(file_get_contents('php://input'), true);
 
-$id = $data['id'];
 $tipo = $data['tipo'];
 $descricao = $data['descricao'];
 $valor = $data['valor'];
 $data_lancamento = $data['data_lancamento'];
 
-$sql = "UPDATE financeiro SET tipo=?, descricao=?, valor=?, data_lancamento=? WHERE id=?";
+$sql = "INSERT INTO financeiro (tipo, descricao, valor, data_lancamento) VALUES (?, ?, ?, ?)";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("ssdsi", $tipo, $descricao, $valor, $data_lancamento, $id);
-
+$stmt->bind_param("ssds", $tipo, $descricao, $valor, $data_lancamento);
 if($stmt->execute()){
-    echo json_encode(['success'=>true]);
+    echo json_encode(['id' => $stmt->insert_id]);
 } else {
-    echo json_encode(['success'=>false]);
+    echo json_encode(['id' => null]);
 }

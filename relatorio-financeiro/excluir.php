@@ -1,12 +1,13 @@
 <?php
 require "../config.php";
+$id = $_GET['id'];
 
-$id = $_GET["id"];
-
-$stmt = $conn->prepare("DELETE FROM financeiro WHERE id = ?");
+$sql = "DELETE FROM financeiro WHERE id=?";
+$stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $id);
-$stmt->execute();
 
-header("Location: finance.php");
-exit;
-?>
+if($stmt->execute()){
+    echo json_encode(['success'=>true]);
+} else {
+    echo json_encode(['success'=>false]);
+}
