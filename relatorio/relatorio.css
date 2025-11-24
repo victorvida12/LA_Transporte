@@ -4,6 +4,10 @@ body {
   margin: 0;
   padding: 20px;
 }
+
+.navbar nav {
+  margin-top: 15px !important;
+}
 .container {
   max-width: 1100px;
   margin-left: 250px !important;
@@ -163,3 +167,4 @@ table td button {
   font-size: 16px;
   border-radius: 4px;
 }
+

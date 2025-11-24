@@ -1,0 +1,53 @@
+/* ===========================
+   CORREÇÕES DE LAYOUT
+=========================== */
+
+body {
+    background: #f7f7f7;
+}
+
+.navbar nav {
+    margin-top: 15px !important;
+}
+
+/* Conteúdo alinhado com o resto do sistema */
+.main-content {
+    margin-left: 275px;
+    padding: 25px 40px;
+}
+
+/* Painel central */
+.box-panel {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.10);
+}
+
+h2 {
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* Inputs formulário */
+.form-add input,
+.form-add select {
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.form-add button {
+    background: #f7b700;
+    color: black;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.form-add button:hover {
+    background: #d9a100;
+}

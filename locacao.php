@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<title>LA Transportes - Veículos</title>
-<link rel="stylesheet" href="css/style_veiculos.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar LA Transportes</title>
+    <link rel="stylesheet" href="css/locacao.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
 </head>
-<body>
-  <div class="layout">
-<div class="sidebar d-flex flex-column">
+<body class="layout" style="margin-left: 400px;">
+
+    <div class="sidebar d-flex flex-column">
         <div class="col">  
             <div class="sidebar-header col"><img src="img/logo-branca.png" alt="" class="logo col"><span class="col">LA Transportes</span></div>
         </div>
@@ -22,11 +24,11 @@
         <nav class="nav flex-column">
             <a class="nav-link" href="painel.php"><i class="bi bi-house"></i> Painel</a>
             <a class="nav-link" href="agenda.html"><i class="bi bi-folder"></i> Agenda</a>
-            <a class="nav-link" href="relatorio-entrega/index.php"><i class="bi bi-truck"></i> Entregas</a>
-            <a class="nav-link active" href="veiculos.html"><i class="bi bi-car-front"></i> Veículos</a>
-            <a class="nav-link" href="relatorio-financeiro/finance.php"><i class="bi bi-currency-dollar"></i> Financeiro</a>
-            <a class="nav-link" href="locacao.html"><i class="bi bi-tools"></i> Locação de Maquinário</a>
-            <a class="nav-link" href="relatorio/relatorio.php"><i class="bi bi-bar-chart"></i> Relatório</a>
+            <a class="nav-link" href="entregas.html"><i class="bi bi-truck"></i> Entregas</a>
+            <a class="nav-link" href="veiculos.html"><i class="bi bi-car-front"></i> Veículos</a>
+            <a class="nav-link" href="financeiro.html"><i class="bi bi-currency-dollar"></i> Financeiro</a>
+            <a class="nav-link active" href="locacao.html"><i class="bi bi-tools"></i> Locação de Maquinário</a>
+            <a class="nav-link" href="relatorio.html"><i class="bi bi-bar-chart"></i> Relatório</a>
             <a class="nav-link" href="func.php"><i class="bi bi-people"></i> Funcionários</a>
         </nav>
 
@@ -103,6 +105,7 @@
 
     </div>
 </div>
-</div>
+
 </body>
+<script src="script.js"></script>
 </html>

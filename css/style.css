@@ -1,5 +1,10 @@
+/* ================================
+   RESET / BASE
+================================ */
 body {
     margin: 0;
+    padding: 0;
+    background: #dadada;
     font-family: Arial, sans-serif;
 }
 
@@ -7,7 +12,9 @@ body {
     display: flex;
 }
 
-/* Sidebar */
+/* ================================
+      SIDEBAR
+================================ */
 .sidebar {
     width: 250px;
     height: 100vh;
@@ -22,31 +29,29 @@ body {
     flex-direction: column;
 }
 
-.flex-column {
-    margin-top: 0 !important;
-}
-
+/* Header colado no topo */
 .sidebar-header {
-    padding: 0 1.5rem;
+    padding: 10px 1.5rem;
     background-color: rgba(247, 183, 0, 1);
     font-weight: bold;
     font-size: 1rem;
-    margin-left: auto;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.bi-search {
-    position: absolute;
-    left: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-    font-size: 1rem;
-    pointer-events: none;
+/* Logo alinhada */
+.logo {
+    display: inline-block;
+    margin: 0;
+    width: 60px;
+    height: auto;
 }
 
-.search-box input{
-    padding-left: 30px;
-}
+/* ================================
+      NAV LINKS
+================================ */
 .sidebar .nav-link {
     color: white;
     padding: 0.75rem;
@@ -54,102 +59,205 @@ body {
     align-items: center;
     gap: 0.5rem;
     margin-left: 12px;
+    text-decoration: none;
+    transition: 0.2s;
 }
 
-.sidebar .nav-link.active, 
+
+.sidebar nav {
+    margin-top: 15px !important; /* você pode testar 10, 15 ou 20px */
+}
+
+.sidebar .nav-link.active,
 .sidebar .nav-link:hover {
     background-color: rgba(247, 183, 0, 0.7);
     border-radius: 0.25rem;
     color: white;
     width: 90%;
-    text-decoration: none;
 }
 
 .sidebar .nav-link i {
     width: 20px;
 }
 
-.logo {
-    display: inline;
-    margin: 1rem auto;
-    width: 60px;
-    height: auto;
+/* ================================
+      BARRA DE PESQUISA
+================================ */
+.search-area {
+    padding: 10px 15px 0 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
-.sidebar .search-box {
-    padding: 0.75rem 1.5rem;
-}
-
-.sidebar .search-box input {
-    width: 100%;
-    padding: 0.5rem 2.5rem 0.5rem 0.75rem; /* espaço para o ícone à direita */
-    border-radius: 4px; /* cantos arredondados maiores */
-    border: none;
-    background-color: rgba(255, 255, 255, 0.5); /* fundo escuro semi-transparente */
-    color: white; /* texto branco */
-    font-size: 0.95rem;
-}
-
-.sidebar .search-box {
+.search-box {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
-.sidebar .search-box::before {
-    content: ""; /* Unicode da lupa 🔍 */
+.search-box i {
     position: absolute;
-    left: 0.75rem;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 10px;
     color: white;
-    font-size: 1rem;
-    pointer-events: none;
 }
 
+.search-box input {
+    width: 100%;
+    padding: 8px 8px 8px 32px;
+    border-radius: 6px;
+    border: none;
+    background: rgba(255,255,255,0.3);
+    color: white;
+}
+
+/* Resultados da busca */
+.search-results {
+    margin-top: 10px;
+}
+
+.search-results .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.search-results .nav-link:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+/* Footer */
 .sidebar .bottom {
     margin-top: auto;
     padding: 1rem 1.5rem;
 }
 
-.sidebar .nav-link:focus {
-    outline: none; /* remove o contorno azul */
-    box-shadow: none; /* remove sombra do navegador */
+/* ================================
+      CONTENT / PAINEL
+================================ */
+.content {
+    margin-left: 275px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
+/* Painel container */
+.panel {
+    width: 780px;
+    background: #ffffff;
+    border-radius: 13px;
+    margin: 40px 0 15px 0;
+    overflow: hidden;
+    padding-bottom: 23px;
+    min-width: 340px;
+}
 
-/* painel */
-
+/* Título */
 .panel-header {
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-bottom: 15px;
-    }
-    .status-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 30px;
-    }
-    .status-table th, .status-table td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: center;
-    }
-    .status-table th {
-        background-color: #f0f0f0;
-    }
-    .status-available {
-        color: green;
-        font-weight: bold;
-    }
-    .status-in-service {
-        color: red;
-        font-weight: bold;
-    }
-    .cards-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-    .card-item {
-        flex: 1 1 300px;
-    }
+    background: #ffd000;
+    padding: 28px 0 15px 0;
+    text-align: center;
+    font-size: 2.08rem;
+    font-weight: bold;
+    letter-spacing: .3px;
+    color: #181818;
+    border-radius: 13px 13px 0 0;
+}
 
+/* Tabelas */
+table {
+    width: 96%;
+    margin: 26px auto 0 auto;
+    border-collapse: collapse;
+    font-size: 1rem;
+    background: none;
+}
+
+th, td {
+    padding: 8px 7px;
+    text-align: center;
+}
+
+tr:not(:last-child) {
+    border-bottom: 1.4px solid #c4c4c4;
+}
+
+/* Inputs / selects */
+input[type="text"], select {
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    padding: 4px 8px;
+    width: 105px;
+    font-size: 1rem;
+    background: #f7f7f7;
+    text-align: center;
+}
+
+/* Botão */
+.botao-simples {
+    background: #ffd000;
+    color: #222;
+    border-radius: 10px;
+    padding: 5px 24px;
+    border: none;
+    font-size: 1.07rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.botao-simples:hover {
+    background: #e6bd00;
+}
+
+/* Cards */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card-item {
+    flex: 1 1 300px;
+}
+
+.card-panel {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Cores dos status */
+.card-panel span.status-disponivel {
+    color: #0ca50c;
+    font-weight: bold;
+}
+
+.card-panel span.status-em-servico {
+    color: #c9a000;
+    font-weight: bold;
+}
+
+.card-panel span.status-indisponivel {
+    color: #d11a1a;
+    font-weight: bold;
+}
+
+/* Status da tabela de funcionários */
+.status-available {
+    color: green;
+    font-weight: bold;
+}
+
+.status-in-service {
+    color: red;
+    font-weight: bold;
+}

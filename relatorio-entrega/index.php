@@ -24,33 +24,28 @@ $result = $conn->query($sql);
 
     <!-- Sidebar -->
     <div class="sidebar d-flex flex-column">
-        
-        <div class="col">  
-            <div class="sidebar-header col">
-                <img src="../img/logo-branca.png" alt="" class="logo col">
-                <span class="col">LA Transportes</span>
-            </div>
-        </div>
-        <div class="search-box row">
-            <i class="bi bi-search col"></i>
-            <input type="text" placeholder="         Procurar" class="col search-box">
-        </div>
 
-        <nav class="nav flex-column">
-            <a class="nav-link" href="../painel.php"><i class="bi bi-house"></i> Painel</a>
-            <a class="nav-link" href="../agenda.html"><i class="bi bi-folder"></i> Agenda</a>
-            <a class="nav-link active" href="../relatorio-entrega/index.php"><i class="bi bi-truck"></i> Entregas</a>
-            <a class="nav-link" href="../veiculos.html"><i class="bi bi-car-front"></i> Veículos</a>
-            <a class="nav-link" href="../relatorio-financeiro/finance.php"><i class="bi bi-currency-dollar"></i> Financeiro</a>
-            <a class="nav-link" href="../locacao.html"><i class="bi bi-tools"></i> Locação de Maquinário</a>
-            <a class="nav-link" href="../relatorio/relatorio.php"><i class="bi bi-bar-chart"></i> Relatório</a>
-            <a class="nav-link" href="../func.php"><i class="bi bi-people"></i> Funcionários</a>
-        </nav>
-
-        <div class="bottom">
-            <a class="nav-link" href="#"><i class="bi bi-box-arrow-left"></i> Sair</a>
-        </div>
+    <div class="sidebar-header">
+        <img src="../img/logo-branca.png" class="logo">
+        <span>LA Transportes</span>
     </div>
+
+    <nav class="nav flex-column">
+        <a class="nav-link" href="../painel.php"><i class="bi bi-house"></i> Painel</a>
+        <a class="nav-link" href="../agenda.php"><i class="bi bi-folder"></i> Agenda</a>
+        <a class="nav-link active" href="../relatorio-entrega/index.php"><i class="bi bi-truck"></i> Entregas</a>
+        <a class="nav-link" href="../veiculos.php"><i class="bi bi-car-front"></i> Veículos</a>
+        <a class="nav-link" href="../relatorio-financeiro/finance.php"><i class="bi bi-currency-dollar"></i> Financeiro</a>
+        <a class="nav-link" href="../locacao.php"><i class="bi bi-tools"></i> Locação de Maquinário</a>
+        <a class="nav-link" href="../relatorio/relatorio.php"><i class="bi bi-bar-chart"></i> Relatório</a>
+        <a class="nav-link" href="../func.php"><i class="bi bi-people"></i> Funcionários</a>
+    </nav>
+
+    <div class="bottom">
+        <a class="nav-link" href="#"><i class="bi bi-box-arrow-left"></i> Sair</a>
+    </div>
+
+</div>
 
     <div class="container">
 
