@@ -34,19 +34,19 @@ CREATE TABLE IF NOT EXISTS `entregas` (
   KEY `veiculo_id` (`veiculo_id`),
   CONSTRAINT `entregas_ibfk_1` FOREIGN KEY (`motorista_id`) REFERENCES `motoristas` (`id`),
   CONSTRAINT `entregas_ibfk_2` FOREIGN KEY (`veiculo_id`) REFERENCES `veiculos` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Exportação de dados foi desmarcado.
 
 -- Copiando estrutura para tabela la_transportes.financeiro
 CREATE TABLE IF NOT EXISTS `financeiro` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `tipo` enum('Entrada','Saida') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `tipo` enum('Entrada','Saida') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `descricao` varchar(255) DEFAULT NULL,
   `valor` decimal(10,2) NOT NULL,
   `data_lancamento` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `manutencoes` (
   PRIMARY KEY (`id`),
   KEY `veiculo_id` (`veiculo_id`),
   CONSTRAINT `manutencoes_ibfk_1` FOREIGN KEY (`veiculo_id`) REFERENCES `veiculos` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `maquinario` (
   PRIMARY KEY (`id`),
   KEY `veiculo_id` (`veiculo_id`),
   CONSTRAINT `maquinario_ibfk_1` FOREIGN KEY (`veiculo_id`) REFERENCES `veiculos` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -86,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `motoristas` (
   `validade_cnh` date DEFAULT NULL,
   `status` enum('Disponível','Em Serviço') NOT NULL DEFAULT 'Disponível',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -101,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `relatorio_entregas` (
   PRIMARY KEY (`id`),
   KEY `entrega_id` (`entrega_id`),
   CONSTRAINT `relatorio_entregas_ibfk_1` FOREIGN KEY (`entrega_id`) REFERENCES `entregas` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -115,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `criado_em` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Exportação de dados foi desmarcado.
 
@@ -129,7 +129,7 @@ CREATE TABLE IF NOT EXISTS `veiculos` (
   `status` enum('Disponível','Em serviço','Indisponível') DEFAULT 'Disponível',
   PRIMARY KEY (`id`),
   UNIQUE KEY `placa` (`placa`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Exportação de dados foi desmarcado.
 
