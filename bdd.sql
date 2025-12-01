@@ -16,7 +16,7 @@
 
 
 -- Copiando estrutura do banco de dados para la_transportes
-CREATE DATABASE IF NOT EXISTS `la_transportes` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE IF NOT EXISTS `la_transportes` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `la_transportes`;
 
 -- Copiando estrutura para tabela la_transportes.entregas
