@@ -1,0 +1,263 @@
+/* ================================
+   RESET / BASE
+================================ */
+body {
+    margin: 0;
+    padding: 0;
+    background: #dadada;
+    font-family: Arial, sans-serif;
+}
+
+.layout {
+    display: flex;
+}
+
+/* ================================
+      SIDEBAR
+================================ */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                url('../img/bg-sidebar.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header colado no topo */
+.sidebar-header {
+    padding: 10px 1.5rem;
+    background-color: rgba(247, 183, 0, 1);
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Logo alinhada */
+.logo {
+    display: inline-block;
+    margin: 0;
+    width: 60px;
+    height: auto;
+}
+
+/* ================================
+      NAV LINKS
+================================ */
+.sidebar .nav-link {
+    color: white;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 12px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+
+.sidebar nav {
+    margin-top: 15px !important; /* você pode testar 10, 15 ou 20px */
+}
+
+.sidebar .nav-link.active,
+.sidebar .nav-link:hover {
+    background-color: rgba(247, 183, 0, 0.7);
+    border-radius: 0.25rem;
+    color: white;
+    width: 90%;
+}
+
+.sidebar .nav-link i {
+    width: 20px;
+}
+
+/* ================================
+      BARRA DE PESQUISA
+================================ */
+.search-area {
+    padding: 10px 15px 0 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-box i {
+    position: absolute;
+    left: 10px;
+    color: white;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 8px 8px 8px 32px;
+    border-radius: 6px;
+    border: none;
+    background: rgba(255,255,255,0.3);
+    color: white;
+}
+
+/* Resultados da busca */
+.search-results {
+    margin-top: 10px;
+}
+
+.search-results .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.search-results .nav-link:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+/* Footer */
+.sidebar .bottom {
+    margin-top: auto;
+    padding: 1rem 1.5rem;
+}
+
+/* ================================
+      CONTENT / PAINEL
+================================ */
+.content {
+    margin-left: 275px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Painel container */
+.panel {
+    width: 780px;
+    background: #ffffff;
+    border-radius: 13px;
+    margin: 40px 0 15px 0;
+    overflow: hidden;
+    padding-bottom: 23px;
+    min-width: 340px;
+}
+
+/* Título */
+.panel-header {
+    background: #ffd000;
+    padding: 28px 0 15px 0;
+    text-align: center;
+    font-size: 2.08rem;
+    font-weight: bold;
+    letter-spacing: .3px;
+    color: #181818;
+    border-radius: 13px 13px 0 0;
+}
+
+/* Tabelas */
+table {
+    width: 96%;
+    margin: 26px auto 0 auto;
+    border-collapse: collapse;
+    font-size: 1rem;
+    background: none;
+}
+
+th, td {
+    padding: 8px 7px;
+    text-align: center;
+}
+
+tr:not(:last-child) {
+    border-bottom: 1.4px solid #c4c4c4;
+}
+
+/* Inputs / selects */
+input[type="text"], select {
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    padding: 4px 8px;
+    width: 105px;
+    font-size: 1rem;
+    background: #f7f7f7;
+    text-align: center;
+}
+
+/* Botão */
+.botao-simples {
+    background: #ffd000;
+    color: #222;
+    border-radius: 10px;
+    padding: 5px 24px;
+    border: none;
+    font-size: 1.07rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.botao-simples:hover {
+    background: #e6bd00;
+}
+
+/* Cards */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card-item {
+    flex: 1 1 300px;
+}
+
+.card-panel {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Cores dos status */
+.card-panel span.status-disponivel {
+    color: #0ca50c;
+    font-weight: bold;
+}
+
+.card-panel span.status-em-servico {
+    color: #c9a000;
+    font-weight: bold;
+}
+
+.card-panel span.status-indisponivel {
+    color: #d11a1a;
+    font-weight: bold;
+}
+
+/* Status da tabela de funcionários */
+.status-available {
+    color: green;
+    font-weight: bold;
+}
+
+.status-in-service {
+    color: red;
+    font-weight: bold;
+}

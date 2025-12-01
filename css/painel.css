@@ -1,0 +1,166 @@
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+                url('img/bg-sidebar.png') center/cover no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar nav {
+    margin-top: 15px !important; /* você pode testar 10, 15 ou 20px */
+}
+
+.sidebar-header {
+    padding: 12px 20px;
+    background: #f7b700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.logo {
+    width: 55px;
+}
+
+/* NAVBAR */
+.sidebar .nav-link {
+    padding: 12px 18px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 6px;
+    color: white;
+    width: 90%;
+    transition: .2s;
+}
+
+.sidebar .nav-link:hover {
+    background: rgba(247,183,0,0.55);
+}
+
+.sidebar .nav-link.active {
+    background: rgba(247,183,0,1);
+}
+
+/* Rodapé */
+.bottom {
+    margin-top: auto;
+    padding: 15px;
+}
+
+/* ======================================
+   CONTEÚDO
+====================================== */
+.content {
+    margin-left: 275px;
+    padding: 25px 0 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.panel {
+    width: 780px;
+    background: white;
+    border-radius: 14px;
+    padding-bottom: 25px;
+    margin-top: 10px;
+    justify-items: center;
+}
+
+.panel-header {
+    background: #ffd000;
+    text-align: center;
+    padding: 25px 0 15px;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 14px 14px 0 0;
+}
+
+/* TABELA */
+table {
+    width: 95%;
+    margin: 25px auto;
+    border-collapse: collapse;
+}
+
+th {
+    background: #eaeaea;
+    padding: 10px;
+}
+
+td {
+    padding: 8px;
+}
+
+tr:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+}
+
+/* STATUS COLORS */
+.status-available {
+    color: green;
+    font-weight: bold;
+}
+
+.status-in-service {
+    color: red;
+    font-weight: bold;
+}
+
+/* CARDS */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.card-item {
+    flex: 1 1 300px;
+}
+
+.card-panel {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.status-disponivel { color: #0ca50c; font-weight: bold; }
+.status-em-servico { color: #c9a000; font-weight: bold; }
+.status-indisponivel { color: #d11a1a; font-weight: bold; }
+
+.status-table {
+    width: 100% !important;
+    margin: 0 auto !important;
+    border-collapse: collapse;
+    justify-content: center;
+}
+
+.status-table th,
+.status-table td {
+    padding: 10px;
+    text-align: center;
+}
+
+.status-table tr:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+}
+
+/* Garante que tudo dentro do painel siga o mesmo alinhamento */
+.panel {
+    width: 780px !important;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}

@@ -1,0 +1,66 @@
+/* ================================
+   AJUSTES DO LAYOUT PADRÃO
+================================ */
+body {
+    background: #f1f1f1;
+}
+
+.sidebar nav {
+    margin-top: 15px !important;
+}
+.content {
+    margin-left: 275px;
+    padding: 25px 40px;
+}
+
+/* Painel */
+.panel {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.12);
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+th, td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+th {
+    background: #f6f6f6;
+    font-weight: bold;
+}
+
+/* Inputs */
+.adicionar-row input,
+.adicionar-row select,
+select {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    margin-right: 10px;
+}
+
+/* Botão */
+.botao-simples {
+    padding: 8px 18px;
+    border-radius: 6px;
+    background: #f7b700;
+    border: none;
+    color: #222;
+    font-weight: 600;
+}
+.botao-simples:hover {
+    background: #d9a100;
+}
+
+/* Status */
+.status-disponivel { color:#0ca50c; font-weight:bold; }
+.status-em-servico { color:#c9a000; font-weight:bold; }
+.status-indisponivel { color:#d11a1a; font-weight:bold; }

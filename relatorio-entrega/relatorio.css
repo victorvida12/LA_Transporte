@@ -1,0 +1,160 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #ddd;
+  margin: 0;
+  padding: 20px;
+}
+.container {
+  max-width: 1000px;
+  margin-left: 250px !important;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f1f1f1;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+header h2 {
+  margin: 0 10px 10px 0;
+}
+header .btn-group {
+  display: flex;
+  gap: 5px;
+  margin: 10px 0;
+  position: relative;
+}
+header .btn-group button {
+  padding: 8px 15px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  border-radius: 5px;
+}
+header .btn-group button:hover {
+  background: #ccc;
+}
+.export-options {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+.export-options button {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+}
+.export-options button:hover {
+  background: #f0f0f0;
+}
+header select, header input[type="text"], header input[type="date"] {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+header label {
+  margin-left: 10px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+th {
+  background: #f7f7f7;
+}
+tbody tr:hover {
+  background: #eee;
+}
+tbody td button {
+  margin-right: 5px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 18px;
+}
+
+.form-add {
+  margin-top: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.form-add input, .form-add select {
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  flex: 1 1 150px;
+  min-width: 120px;
+}
+.form-add input[type="date"] {
+  max-width: 150px;
+}
+.form-add button {
+  padding: 10px 20px;
+  background: #007bff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  flex: 0 0 auto;
+}
+.form-add button:hover {
+  background: #0056b3;
+}
+.btn-save {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  background: #ffbb00;
+  border: none;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Inputs linha edição para manter largura e layout */
+.rel-edit-input {
+  width: 100%;
+  max-width: 120px;
+  box-sizing: border-box;
+  padding: 6px 7px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-size: 15px;
+  background: #fafafa;
+}
+.rel-edit-input.desc {
+  max-width: 220px;
+}
+table td button {
+  padding: 3px 7px;
+  font-size: 16px;
+  border-radius: 4px;
+}

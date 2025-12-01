@@ -1,0 +1,144 @@
+/* ====================
+   SIDEBAR + NAV
+==================== */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+                url('img/bg-sidebar.png') center/cover no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar nav {
+    margin-top: 10px !important;
+}
+
+.sidebar-header {
+    padding: 12px 20px;
+    background: #f7b700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.logo {
+    width: 55px;
+}
+
+/* LINKS */
+.sidebar .nav-link {
+    padding: 12px 18px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    margin-left: 8px;
+    border-radius: 6px;
+    width: 90%;
+    transition: background 0.2s;
+}
+
+.sidebar .nav-link:hover {
+    background: rgba(247,183,0,0.6);
+}
+
+.sidebar .nav-link.active {
+    background: rgba(247,183,0,1);
+}
+
+/* RODAPÉ */
+.bottom {
+    margin-top: auto;
+    padding: 15px;
+}
+
+.content {
+    margin-left: 275px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.panel {
+    width: 780px;
+    background: #fff;
+    border-radius: 14px;
+    padding-bottom: 25px;
+    margin-top: 20px;
+}
+
+.panel-header {
+    background: #f7b700;
+    text-align: center;
+    padding: 25px 0 15px 0;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 14px 14px 0 0;
+}
+
+/* TABELA */
+table {
+    width: 94%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th {
+    background: #eaeaea;
+    padding: 10px;
+}
+
+td {
+    padding: 8px;
+}
+
+tr:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+}
+
+select {
+    padding: 5px;
+    border-radius: 6px;
+    background: #f7f7f7;
+}
+
+/* BOTÃO */
+.botao-simples {
+    background: #f7b700;
+    padding: 8px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.botao-simples:hover {
+    background: #d9a300;
+}
+
+/* FORM */
+.adicionar-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.adicionar-row input, .adicionar-row select {
+    padding: 7px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+}

@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-image: url('fundo-login.jpg.png'); /* fundo total já incluso */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-wrapper {
+    width: 900px;
+    height: 650px;
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+.login-left {
+    flex: 1;
+    background: url('crie-sua-conta.png') center center/cover no-repeat;
+    position: relative;
+    color: white;
+    padding: 30px;
+    display: flex;
+    align-items: flex-end;
+    font-weight: bold;
+    font-size: 24px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.login-logo {
+    display: block;
+    margin: 70px auto 0;
+    max-width: 150px;
+    height: auto;
+}
+
+
+.login-left span {
+    margin-bottom: 20px;
+}
+
+.login-right {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center; 
+}
+
+
+.login-form {
+    position: relative;
+    z-index: 1;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-form h2 {
+    margin: 0 0 10px;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.login-form p.sub-title {
+    margin: 0 0 30px;
+    font-size: 12px;
+    color: #222;
+    text-align: center;
+}
+
+.login-form label
+{
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffca07;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.login-form button:hover {
+    background-color: #e6b006;
+}
+.login-form .links {
+    margin-top: 15px;
+    text-align: center;
+}
+.login-form .links a {
+    color: #ffca07;
+    text-decoration: none;
+    font-size: 12px;
+}
+.login-form .links a:hover {
+    text-decoration: underline;
+}
+.login-form .error-message {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.login-form .success-message {
+    color: green;
+    font-size: 12px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.login-right {
+    flex: 1;
+    background: rgb(255, 255, 255); /* fundo branco semi-transparente */
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    position: relative;
+    overflow: hidden;;
+}
+
+
+
+
+/* Container do lembrar-me alinhado à esquerda */
+.remember-container {
+    margin-top: 5px;
+    width: 100%;
+    text-align: left;
+}
+
+/* Ajusta label e checkbox para aparência correta */
+.remember-container label {
+    font-size: 13px;
+    cursor: pointer;
+    color: #555;
+    user-select: none;
+}
+
+.remember-container input[type="checkbox"] {
+    margin-right: 6px;
+    vertical-align: middle;
+    cursor: pointer;
+}
