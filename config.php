@@ -2,7 +2,7 @@
 // Configuração do banco de dados
 $servername = "localhost";
 $username = "root";
-$password = "root"; // se você definiu senha no MySQL, coloque aqui
+$password = ""; // se você definiu senha no MySQL, coloque aqui
 $dbname = "la_transportes";
 
 // Cria a conexão

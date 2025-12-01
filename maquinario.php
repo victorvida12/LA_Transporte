@@ -138,10 +138,11 @@ formAdd.addEventListener('submit', e => {
             novaLinha.innerHTML = `
                 <td>${res.id}</td>
                 <td>${res.modelo} - ${res.placa}</td>
-                <td>${dados.periodo_inicio}</td>
-                <td>${dados.periodo_fim}</td>
+                <td>${res.periodo_inicio}</td>
+                <td>${res.periodo_fim}</td>
                 <td>
-                    <button class="btn btn-sm btn-danger" onclick="removerLocacao(<?= $l['id'] ?>)">❌ Excluir</button>
+                    <a href="editar_locacao.php?id=${res.id}" title="Editar">✎</a>
+                    <button class="btn btn-sm btn-danger" onclick="remover(${res.id}, this)">❌ Excluir</button>
                 </td>
             `;
             tabela.prepend(novaLinha);
